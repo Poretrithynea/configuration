@@ -21,17 +21,18 @@ spec:
         ports:
           - containerPort: 5432
         volumeMounts:
-          - name: nfs
-            mountPath: /var/lib/postgres/data
+          - name: nfs-share
+            mountPath: /var/lib/postgresql/data
+            readOnly: false
       volumes:
-      - name: nfs
+      - name: nfs-share
         persistentVolumeClaim:
-          claimName: nfs
+          claimName: nfs-share
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: postgres-service
+  name: db
 spec:
   selector:            
     app: postgres
