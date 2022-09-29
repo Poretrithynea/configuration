@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: flask
-        image: poretrithynea/miniproject:4
+        image: poretrithynea/miniproject:DOCKERTAG
         ports:
           - containerPort: 5000
 ---
