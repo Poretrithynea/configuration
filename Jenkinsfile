@@ -10,7 +10,6 @@ node {
                         sh "git config user.email sopheapphon2001@gmail.com"
                         sh "git config user.name PhonSopheap"
                         sh "cat flask-deployment.yml"
-                        #sh "sed -i 's+poretrithynea/miniproject.*+poretrithynea/miniproject:${DOCKERTAG}+g' flask-deployment.yml"
                         sh "sed 's/DOCKERTAG/${DOCKERTAG}/g' flask-deployment.yml > flask-deployment.yml"
                         sh "cat flask-deployment.yml"
                         sh "git add ."
