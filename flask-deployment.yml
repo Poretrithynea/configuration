@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: flask
-        image: s0pheap/flask
+        image: poretrithynea/miniproject
         ports:
           - containerPort: 5000
 ---
