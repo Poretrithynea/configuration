@@ -7,9 +7,9 @@ node {
             script {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                     withCredentials([usernamePassword(credentialsId: 'github3', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
-                        sh "git config user.email rotanakkosal03@gmail.com"
-                        sh "git config user.name Rotanakkosal"
-                        sh "cat deployment.yaml"
+                        sh "git config user.email sopheapphon2001@gmail.com"
+                        sh "git config user.name PhonSopheap"
+                        sh "cat flask-deployment.yaml"
                         sh "sed -i 's+poretrithynea/miniproject.*+poretrithynea/miniproject:${DOCKERTAG}+g' flask-deployment.yaml"
                         sh "cat flask-deployment.yaml"
                         sh "git add ."
