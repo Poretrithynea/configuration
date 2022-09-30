@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: flask
-        image: rotanakkosal/miniproject:23
+        image: rotanakkosal/miniproject:28
         ports:
           - containerPort: 5000
 ---
