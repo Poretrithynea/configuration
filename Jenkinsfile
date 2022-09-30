@@ -18,5 +18,12 @@ node {
       }
     }
   }
+            script{
+                 post {
+                    always {
+                     emailext body: 'I hope it works!', subject: 'Testing', to: 'reportteam168@gmail.com'
+                    }
+                  }
+            }
 }
 }
